@@ -43,4 +43,17 @@ module GameOfLife
       @board
     end
   end
+
+  class Hades
+    def initialize(board)
+    end
+
+    def act
+    end
+
+    def board
+      "| |"
+    end
+
+  end
 end
