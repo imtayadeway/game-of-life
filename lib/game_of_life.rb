@@ -1,19 +1,20 @@
 module GameOfLife
   class Game
     def initialize(board=nil)
-      @val = "|x|"
+      @board = board
     end
 
-    def self.build(x)
-      Game.new()
+    def self.build(input)
+      board = GameOfLife::Board.new(input)
+      Game.new(board)
     end
 
     def tick
-      @val = "| |"
+      @board = "| |"
     end
 
     def to_s
-      @val
+      @board.to_s
     end
 
   end

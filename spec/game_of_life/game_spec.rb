@@ -24,11 +24,11 @@ RSpec.describe GameOfLife::Game do
     end
 
     it "renders the current state of the board" do
-      board = double(GameOfLife::Board, to_s: "|x|")
+      board = double(GameOfLife::Board, to_s: "|x| |")
 
       game = described_class.new(board)
 
-      expect(game.to_s).to eq("|x|")
+      expect(game.to_s).to eq("|x| |")
     end
   end
 
